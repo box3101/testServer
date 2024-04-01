@@ -1,0 +1,34 @@
+@charset 'utf-8';
+// 1. utility
+@import 'utility/function';
+@import 'utility/variable';
+@import 'utility/mixin';
+
+// 2. base
+@import 'base/base';
+@import 'base/font';
+@import 'base/helper';
+
+// 3. vendor
+
+// 4. component
+@import 'component/button';
+@import 'component/form';
+@import 'component/icon';
+
+// 5. layout
+@import 'layout/hdft';
+@import 'layout/header'; // 추가된 header 영역
+@import 'layout/main';
+@import 'layout/invest';
+@import 'layout/dev';
+@import 'layout/mnb';
+@import 'layout/complete';
+@import 'layout/modal';
+@import 'layout/animation';
+@import 'layout/support';
+@import 'layout/invest-v2';
+@import 'layout/components-kjh';
+@import 'layout/components-khj';
+/* =================== 20240321 lcy 추가 =================== */ 
+@import 'layout/components-lcy';

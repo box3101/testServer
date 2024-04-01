@@ -1,0 +1,427 @@
+/* =================== form =================== */
+.input {
+  @include input-reset;
+
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 0 21px;
+  border: 1px solid #f5f5f7;
+  border-radius: 12px;
+  background-color: #fafafa;
+  font-size: rem(16);
+
+  @include mobile {
+    height: 50px;
+  }
+
+  @include hover {
+    border: 2px solid color(main);
+  }
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+}
+
+.inp {
+  @include input-reset;
+
+  width: 100%;
+  padding-left: 65px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #606060;
+  font-size: rem(20);
+  font-weight: 500;
+  color: #fff;
+
+  &:focus {
+    border-color: #94f8ff;
+  }
+
+  @include tablet {
+    padding-left: 53px;
+    font-size: rem(17);
+  }
+
+  &.inp-sm {
+    padding: 0 0 2px 2px;
+    font-size: rem(16);
+    font-weight: 400;
+  }
+}
+
+.input-flex-grp {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+
+  &.type-gap-14 {
+    gap: 14px;
+  }
+
+  &.type-media-01 {
+    @include media(1064px) {
+      display: block;
+    }
+  }
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 46px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  &.type-rn {
+    margin-bottom: 0;
+  }
+}
+
+.label-md {
+  position: absolute;
+  flex-shrink: 0;
+  font-size: rem(17);
+  font-weight: 400;
+  color: #a4f9ff;
+
+  @include tablet {
+    bottom: 16px;
+    font-size: rem(15);
+  }
+}
+
+// input
+.inp-label {
+  display: block;
+  font-size: rem(16);
+  font-weight: 700;
+  color: color(main);
+  margin-bottom: 13px;
+
+  @include mobile {
+    font-size: 14px;
+  }
+
+  &.inp-big-label {
+    margin-bottom: 18px;
+
+    @include mobile {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+// checkbox
+.chck-all-wrap {
+  padding: 25px 0;
+  border-bottom: 1px solid #e8e8e8;
+
+  @include mobile {
+    padding: 30px 0;
+  }
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.chck-flex-row-grp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include mobile {
+    display: block;
+  }
+
+  &.type-flex-wrap {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &.type-mb {
+    margin-bottom: 12px;
+  }
+
+  .chck-box {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.type-rn {
+      margin-bottom: 0;
+
+      @include tablet {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.input-box.chck-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include mobile {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.input-box.typw-w-138 {
+  width: 138px;
+}
+
+.chck-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  background-color: #f5f5f5;
+  cursor: pointer;
+
+  @include make-before {
+    @include absolute(0%, 0%);
+    width: 0%;
+    height: 100%;
+    @include bg-url(icon, 'icon_check.svg');
+    transition: all 0.5s;
+  }
+}
+
+.chck-txt {
+  font-size: rem(18);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  padding-left: 12px;
+  cursor: pointer;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.chck-input:checked {
+  ~.chck-icon {
+    background-color: #4082ff;
+
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+// select
+.select-flex-row-grp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+
+  @include mobile {
+    display: block;
+    margin-bottom: 0;
+
+    .select-box {
+      margin-bottom: 30px;
+    }
+  }
+
+  .select-box {
+    flex-basis: 47%;
+  }
+}
+
+.select-type {
+  border: 1px solid #f5f5f7;
+  border-radius: 12px;
+  background-color: #fafafa;
+  width: 100%;
+  height: 60px;
+  padding: 0 21px;
+  outline: none;
+  appearance: none;
+  @include bg-url(icon, 'icon_spread_on.svg');
+  background-position: right 21px center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  font-size: rem(16);
+
+  @include mobile {
+    height: 50px;
+  }
+
+  &:hover {
+    outline: 1px solid color(main);
+  }
+
+  &:focus {
+    outline: 2px solid color(main);
+  }
+}
+
+.select-01 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.121' height='8.121' viewBox='0 0 14.121 8.121'%3E%3Cg id='그룹_58509' data-name='그룹 58509' transform='translate(12.891 7.061) rotate(180)'%3E%3Cline id='선_75' data-name='선 75' y1='6' x2='6' transform='translate(-0.17)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1.5'/%3E%3Cline id='선_76' data-name='선 76' x1='6' y1='6' transform='translate(5.83)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-size: 15px 8px;
+  background-position: center right 19px;
+  background-repeat: no-repeat;
+  // color: #000;
+
+  &:invalid {
+    color: #606060;
+  }
+
+  @include tablet {
+    font-size: rem(17);
+  }
+}
+
+// textarea
+.textarea-type {
+  width: 100%;
+  height: 185px;
+  padding: 18px 21px;
+  resize: none;
+  border: 1px solid #f5f5f7;
+  border-radius: 12px;
+  background-color: #fafafa;
+  font-size: rem(16);
+
+  &:hover {
+    outline: 1px solid color(main);
+  }
+
+  &:focus {
+    outline: 2px solid color(main);
+  }
+}
+
+// rn checkbox
+.is-none {
+  display: none !important;
+}
+
+.check-switch:checked {
+  ~.label-chk-01 {
+    border-color: color(rnmain);
+    box-shadow: 0px 12px 16px rgba(color(rnmain), 0.16);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='78' height='78' viewBox='0 0 78 78'%3E%3Cg id='그룹_58447' data-name='그룹 58447' transform='translate(-565 -700)'%3E%3Crect id='사각형_26816' data-name='사각형 26816' width='78' height='78' rx='10' transform='translate(565 700)' fill='%231354ff'/%3E%3Cpath id='패스_16376' data-name='패스 16376' d='M2336.538,769.5l10.676,10.676,21.579-22.384' transform='translate(-1749.037 -30.292)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='9'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+    &.type-invest {
+      border-color: color(rninvmain);
+      box-shadow: 0px 12px 16px rgba(#2A02FD, 0.1);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='78' height='78' viewBox='0 0 78 78'%3E%3Cg id='그룹_59550' data-name='그룹 59550' transform='translate(3092 4102.645)'%3E%3Crect id='사각형_28452' data-name='사각형 28452' width='78' height='78' rx='10' transform='translate(-3092 -4102.645)' fill='%231b02fd'/%3E%3Cpath id='패스_16558' data-name='패스 16558' d='M2336.538,769.5l10.676,10.676,21.579-22.384' transform='translate(-5406.037 -4832.938)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='9'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+      .num {
+        color: #4302FD;
+      }
+    }
+
+    .num {
+      color: color(main);
+    }
+  }
+}
+
+.label-chk-01 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 138px;
+  width: 100%;
+  padding: 40px 0 40px 37px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='78' height='78' viewBox='0 0 78 78'%3E%3Cg id='그룹_58446' data-name='그룹 58446' transform='translate(-565 -1040)'%3E%3Cg id='사각형_26822' data-name='사각형 26822' transform='translate(565 1040)' fill='%23e9e9e9' stroke='%23e4e4e4' stroke-width='2'%3E%3Crect width='78' height='78' rx='10' stroke='none'/%3E%3Crect x='1' y='1' width='76' height='76' rx='9' fill='none'/%3E%3C/g%3E%3Cpath id='패스_16378' data-name='패스 16378' d='M2336.538,769.5l10.676,10.676,21.579-22.384' transform='translate(-1749.037 309.708)' fill='none' stroke='%23d6d6d6' stroke-linecap='round' stroke-width='9'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: left 85px center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &.type-invest {
+    @include tablet {
+      padding: 26px 42px 24px 75px;
+    }
+
+    &:hover {
+      border-color: color(rninvmain);
+    }
+  }
+
+  &:hover {
+    border-color: color(rnmain);
+    box-shadow: 0px 12px 16px rgba(#2A02FD, 0.1);
+  }
+
+  @include tablet {
+    padding: 19px 42px 20px 75px;
+    background-position: left 16px center;
+    background-size: 44px 44px;
+  }
+
+  @include hover {
+    border-color: color(rnmain);
+    box-shadow: 0px 12px 16px rgba(color(rnmain), 0.16);
+  }
+
+  .num {
+    font-family: 'Poppins', sans-serif;
+    font-size: rem(21);
+    font-weight: 500;
+    color: #d6d6d6;
+  }
+
+
+}
+
+.label-chk-02 {
+  display: inline-block;
+  padding-left: 26px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.143' height='17.143' viewBox='0 0 17.143 17.143'%3E%3Cg id='그룹_32899' data-name='그룹 32899' opacity='0.8'%3E%3Cg id='사각형_277' data-name='사각형 277' fill='none' stroke='%23fff' stroke-width='1'%3E%3Crect width='17.143' height='17.143' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='16.143' height='16.143' fill='none'/%3E%3C/g%3E%3Cpath id='패스_77' data-name='패스 77' d='M-17424.512-14606.182l2.793,2.916,5-6.233' transform='translate(17429.301 14614.398)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 17px 17px;
+  font-size: rem(16);
+  font-weight: 400;
+  color: rgba(#fff, 0.78);
+  cursor: pointer;
+}
+
+.check-switch:checked+.label-chk-02 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.143' height='17.143' viewBox='0 0 17.143 17.143'%3E%3Cg id='그룹_32899' data-name='그룹 32899' opacity='0.8'%3E%3Cg id='패스_16460' data-name='패스 16460' fill='%2300c7d5'%3E%3Cpath d='M 16.642578125 16.642578125 L 0.499999076128006 16.642578125 L 0.499999076128006 0.499999076128006 L 16.642578125 0.499999076128006 L 16.642578125 16.642578125 Z' stroke='none'/%3E%3Cpath d='M 1 1 L 1 16.142578125 L 16.142578125 16.142578125 L 16.142578125 1 L 1 1 M 0 0 L 17.142578125 0 L 17.142578125 17.142578125 L 0 17.142578125 L 0 0 Z' stroke='none' fill='%2300c7d5'/%3E%3C/g%3E%3Cpath id='패스_77' data-name='패스 77' d='M-17424.512-14606.182l2.793,2.916,5-6.233' transform='translate(17429.301 14614.398)' fill='%2300c7d5' stroke='%23fff' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+  color: #00c7d5;
+  font-weight: 600;
+}
+
+
+.label-chk-03 {
+  display: inline-block;
+  padding-left: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cg id='그룹_60525' data-name='그룹 60525' opacity='0.8'%3E%3Cg id='사각형_277' data-name='사각형 277' fill='%238e8e8e' stroke='%238e8e8e' stroke-width='1'%3E%3Crect width='18' height='18' rx='3' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='17' height='17' rx='2.5' fill='none'/%3E%3C/g%3E%3Cpath id='패스_77' data-name='패스 77' d='M-17424.512-14606.708l2.684,2.452,4.8-5.242' transform='translate(17429.703 14615.563)' fill='none' stroke='%23212123' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 17px 17px;
+  font-size: rem(16);
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+}
+
+.check-switch:checked+.label-chk-03 {
+  background-image: url("data:image/svg+xml,%3Csvg id='그룹_60528' data-name='그룹 60528' xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath id='패스_17391' data-name='패스 17391' d='M3,0H15a3,3,0,0,1,3,3V15a3,3,0,0,1-3,3H3a3,3,0,0,1-3-3V3A3,3,0,0,1,3,0Z' fill='%23a4f9ff'/%3E%3Cpath id='패스_77' data-name='패스 77' d='M-17424.512-14606.708l2.684,2.452,4.8-5.242' transform='translate(17429.703 14615.563)' fill='none' stroke='%23212123' stroke-linecap='round' stroke-width='2'/%3E%3C/svg%3E%0A");
+}

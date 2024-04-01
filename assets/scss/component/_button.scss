@@ -1,0 +1,218 @@
+/* =================== button =================== */
+.btn {
+  @include input-reset;
+  @include flex-center(inline-flex);
+
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #cdd5e3;
+    cursor: not-allowed;
+
+    @include hover {
+      background-color: #cdd5e3;
+    }
+
+    &:active {
+      background-color: #cdd5e3;
+    }
+  }
+}
+
+.btn-h-action {
+  overflow: hidden;
+  position: relative;
+    
+  @include make-before {
+    z-index: 1;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: calc(0% - 60px);
+    width: 40px;
+    height: 150%;
+    background-color: white;
+    transform: skew(-30deg);
+    transition: all 0.8s;
+  }
+
+  @include hover {
+    &:before {
+      left: calc(100% + 3px);
+    }
+  }
+}
+
+.btn-grp {
+  &.mt-34 {
+    margin-top: 34px;
+  }
+}
+
+// button style
+.btn-rounded {
+  border-radius: 8px;
+}
+
+.btn-rounded-5 {
+  border-radius: 5px;
+}
+
+.btn-md {
+  width: 153px;
+  height: 52px;
+  font-size: rem(22);
+  font-weight: 700;
+}
+
+.btn-sm {
+  width: 120px;
+  height: 40px;
+  font-size: rem(16);
+  font-weight: 500;
+}
+
+.btn-w-full {
+  width: 100%;
+}
+
+.btn-h-83 {
+  height: 83px;
+}
+
+.btn-tab-h-54 {
+  @include tablet {
+    height: 54px !important;
+  }
+}
+
+.btn-h-54 {
+  height: 54px;
+}
+
+.btn-main {
+  background-color: color(main);
+  color: #fff;
+
+  @include hover {
+    background-color: darken(color(main), 2%);
+  }
+
+  &:active {
+    background-color: darken(color(main), 3%);
+  }
+}
+
+.btn-rn-main {
+  background-color: color(rnmain);
+  color: #fff;
+
+  @include hover {
+    background-color: darken(color(rnmain), 2%);
+  }
+
+  &:active {
+    background-color: darken(color(rnmain), 3%);
+  }
+}
+
+.btn-rninv-main {
+  background-color: color(rninvmain);
+  color: #fff;
+
+  @include hover {
+    background-color: darken(color(rninvmain), 2%);
+  }
+
+  &:active {
+    background-color: darken(color(rninvmain), 3%);
+  }
+}
+
+.btn-sky {
+  background-color: #00c7d5;
+  color: #fff;
+
+  @include hover {
+    background-color: darken(#00c7d5, 2%);
+  }
+
+  &:active {
+    background-color: darken(#00c7d5, 3%);
+  }
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #cdd5e3;
+
+  @include hover {
+    background-color: darken(#fff, 2%);
+  }
+
+  &:active {
+    background-color: darken(#fff, 3%);
+  }
+}
+
+.btn-bd-gray {
+  border: 1px solid #d6dae1;
+  background-color: #fff;
+  color: color(text);
+
+  @include hover {
+    background-color: darken(#fff, 2%);
+  }
+
+  &:active {
+    background-color: darken(#fff, 3%);
+  }
+}
+
+.btn-font-36 {
+  font-size: rem(36);
+}
+
+.btn-font-20 {
+  font-size: rem(20);
+}
+
+.btn-font-13 {
+  font-size: rem(13);
+}
+
+.btn-tab-font-22 {
+  @include tablet {
+    font-size: rem(22) !important;
+  }
+}
+
+.btn-color-gray {
+  color: #919191;
+}
+
+.btn-underline {
+  text-decoration: underline;
+}
+
+// ect
+.btn-gotop {
+  opacity: 0.88;
+  width: 37px;
+  height: 37px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+// rn build
+.btn-counsel {
+  width: 100%;
+  height: 54px;
+
+  @include tablet {
+    height: 50px;
+    font-size: rem(18);
+  }
+}

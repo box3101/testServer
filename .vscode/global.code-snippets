@@ -1,0 +1,151 @@
+{
+	"img": {
+		"prefix": "img",
+		"body": [
+			"<img class='$1' src='../assets/img/$2' alt='$3'>",
+		],
+	},
+	"aft": {
+		"prefix": "after",
+		"body": [
+			"@include make-after{$1}"
+		],
+	},
+	"bef": {
+		"prefix": "befer",
+		"body": [
+			"@include make-before{$1}"
+		],
+	},
+	"doq": {
+		"prefix": "doq",
+		"body": [
+			"document.querySelector('$1');"
+		],
+	},
+	"click": {
+		"prefix": "click",
+		"body": [
+			"document.querySelector('$1')?.addEventListener('click',()=>{$2});"
+		],
+	},
+	"doa": {
+		"prefix": "doa",
+		"body": [
+			"document.querySelectorAll('$1');"
+		],
+	},
+	"ur": {
+		"prefix": "url",
+		"body": [
+			"	@include bg-url('img','$1');"
+		],
+	},
+	"top50%": {
+		"prefix": "t50%",
+		"body": [
+			"@include po-y;"
+		],
+	},
+	"left50%": {
+		"prefix": "l50%",
+		"body": [
+			"position: absolute; left: 50%; transform: translateX(-50%);"
+		],
+	},
+	"web": {
+		"prefix": "web",
+		"body": [
+			"@include media(\\$web, max) {$1}"
+		],
+	},
+	"tab": {
+		"prefix": "tab",
+		"body": [
+			"@include media(\\$tab, max) {$1}"
+		],
+	},
+	"mo": {
+		"prefix": "mo",
+		"body": [
+			"@include media(\\$mo, max) {$1}"
+		],
+	},
+	"shadow": {
+		"prefix": "sha",
+		"body": [
+			"box-shadow: $1px $2px $3px rgba($4);"
+		],
+	},
+	"text": {
+		"prefix": "text",
+		"body": [
+			"@include text-style($1px, $2);"
+		],
+	},
+	"cm": {
+		"prefix": "cm",
+		"body": [
+			"/* ///////////////////////////////////////////////////////""$1""*/////////////////////////////////////////////////////////"
+		],
+	},
+	"cm2": {
+		"prefix": "cm2",
+		"body": [
+			"/* =================== $1 =================== */ ",
+		],
+	},
+	"cm3": {
+		"prefix": "cm3",
+		"body": [
+			"<!-- ========================================",
+			"$1",
+			"======================================== -->"
+		],
+	},
+	"add": {
+		"prefix": "add",
+		"body": [
+			"addEventListener('click', function(){$1})",
+		],
+	},
+	"bar": {
+		"prefix": "bar",
+		"body": [
+			"	@include make-after{@include po-y;right: -$1px; width: 1px; background: #E1E1E1; height: 14px;}",
+		],
+	},
+	"bgc": {
+		"prefix": "bgc",
+		"body": [
+			"background-color: \\$clr-pri;",
+		],
+	},
+	"cp": {
+		"prefix": "cp",
+		"body": [
+			"\\$clr-pri",
+		],
+	},
+	"!im": {
+		"prefix": "!im",
+		"body": [
+			"!important;",
+		],
+	},
+	"Font Size and Weight": {
+		"prefix": "f",
+		"body": [
+			"font-size: ${1:size}px;",
+			"font-weight: ${2:weight};""color: $3;"
+		],
+		"description": "Apply font-size and font-weight"
+	},
+	"aos": {
+		"prefix": "aos",
+		"body": [
+			"data-aos='fade-up'  data-aos-delay='$1'"
+		],
+		"description": "Apply font-size and font-weight"
+	}
+}

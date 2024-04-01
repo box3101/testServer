@@ -1,0 +1,704 @@
+/* =================== animation =================== */
+// aos custom
+.aos-animate {
+  transition-delay: 300ms;
+
+  @include tablet {
+    transition-delay: 0s;
+  }
+
+  &[data-aos-delay='200'] {
+    transition-delay: 500ms;
+
+    @include tablet {
+      transition-delay: 0s;
+    }
+  }
+
+  &[data-aos-delay='300'] {
+    transition-delay: 600ms;
+
+    @include tablet {
+      transition-delay: 0s;
+    }
+  }
+
+  &[data-aos-delay='400'] {
+    transition-delay: 700ms;
+
+    @include tablet {
+      transition-delay: 0s;
+    }
+  }
+
+  &[data-aos-delay='600'] {
+    transition-delay: 900ms;
+
+    @include tablet {
+      transition-delay: 0s;
+    }
+  }
+
+  &[data-aos-delay='900'] {
+    transition-delay: 1200ms;
+
+    @include tablet {
+      transition-delay: 0s;
+    }
+  }
+
+  .highlight {
+    &::before {
+      width: calc(100% + 6px);
+    }
+  }
+
+  .highlight-sm {
+    &::before {
+      width: calc(100% + 2px);
+    }
+  }
+}
+
+// underline highlight
+.highlight-sm {
+  &:nth-of-type(1) {
+    &::before {
+      transition-delay: 1s;
+    }
+  }
+
+  &:nth-of-type(2) {
+    &::before {
+      transition-delay: 2s;
+    }
+  }
+
+  &:nth-of-type(3) {
+    &::before {
+      transition-delay: 3s;
+    }
+  }
+
+  &:nth-of-type(4) {
+    &::before {
+      transition-delay: 4s;
+    }
+  }
+
+  &:nth-of-type(5) {
+    &::before {
+      transition-delay: 5s;
+    }
+  }
+}
+
+// scroll animation
+@keyframes scrolling {
+  0% {
+    opacity: 0;
+    transform: translateY(-70%);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: translateY(50%);
+  }
+}
+
+@keyframes scrolling-hori {
+  0% {
+    opacity: 0;
+    transform: translateX(-70%);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: translateX(50%);
+  }
+}
+
+.scroll-img {
+  width: 15px;
+  animation-name: scrolling;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+.scroll-img-hori {
+  width: 15px;
+  animation-name: scrolling-hori;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+// help section
+.help-section {
+  .help-conts1 {
+    .help-con-dec .img {
+      transition-delay: 400ms;
+
+      @include tablet {
+        transition-delay: 0;
+      }
+    }
+  }
+
+  .help-conts2 {
+    transition-delay: 400ms;
+
+    @include tablet {
+      transition-delay: 0;
+    }
+
+    .help-con-dec .img {
+      transition-delay: 600ms;
+
+      @include tablet {
+        transition-delay: 0;
+      }
+    }
+  }
+
+  .help-conts3 {
+    transition-delay: 600ms;
+
+    @include tablet {
+      transition-delay: 0;
+    }
+
+    .help-con-dec .img {
+      transition-delay: 800ms;
+
+      @include tablet {
+        transition-delay: 0;
+      }
+    }
+  }
+}
+
+// second question section
+.main-support-conts-wrap {
+  .main-support-list {
+    opacity: 0;
+    transform: rotateX(100deg);
+    transition: all 0.8s;
+
+    @include tablet {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+.main-support-conts-wrap.aos-animate {
+  .main-support-list {
+    opacity: 1;
+    transform: none;
+  }
+
+  .support-package {
+    @for $i from 1 through 10 {
+      .main-support-list:nth-child(#{$i}) {
+        transition-delay: ($i * 100ms) + 300ms;
+      }
+    }
+  }
+
+  .support-program {
+    @for $i from 1 through 20 {
+      .main-support-list:nth-child(#{$i}) {
+        transition-delay: ($i * 50ms) + 300ms;
+      }
+    }
+  }
+}
+
+// consulting section
+@keyframes moveStar {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-150px, 100px);
+  }
+}
+
+@keyframes moveMoon {
+  0% {
+    transform: translate(-130px, 50px);
+  }
+
+  100% {
+    transform: translate(100px, -130px);
+  }
+}
+
+.obj-img.star {
+  animation-name: moveStar;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  &.star2 {
+    animation-delay: 0.4s;
+  }
+}
+
+.obj-img.moon {
+  animation-name: moveMoon;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  @include mobile {
+    animation-duration: 10s;
+  }
+}
+
+// dongdong
+@keyframes dongdong {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.ani-dongdong {
+  animation-name: dongdong;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.gradi-conts-list {
+  &:nth-child(2) {
+    .icon-wrap {
+      animation-delay: 0.3s;
+    }
+  }
+
+  &:nth-child(3) {
+    .icon-wrap {
+      animation-delay: 0.5s;
+    }
+  }
+}
+
+// circle wave
+@keyframes sizeMove {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.circle-wave-wrap {
+  &:before {
+    animation-name: sizeMove;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  &:after {
+    animation-name: sizeMove;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+  }
+
+  .circle-wave {
+    &:before {
+      animation-name: sizeMove;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-delay: 2s;
+    }
+
+    &:after {
+      animation-name: sizeMove;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-delay: 3s;
+    }
+  }
+}
+
+// rotate interaction
+@keyframes moveRote {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+.rt-list-wrap {
+  animation-name: moveRote;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.rt-list {
+  animation-name: moveRote;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+// partner logo
+@keyframes ptnLogo {
+  0% {
+    background-position: 2264px; // 이미지 크기대로 변경
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
+// start faq section
+@keyframes ptnLogo-faq {
+  0% {
+    background-position: 2254px; // 이미지 크기대로 변경
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes ptnLogo-faq-mo {
+  0% {
+    background-position: 1280px; // 이미지 크기대로 변경
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes ptnLogoMb {
+  0% {
+    background-position: 1841px; // 이미지 크기대로 변경
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
+.ptn-logo-wrap {
+  @include bg-url(img, 'invest/img_ptn_logos.png');
+  @include bg-op($s: 2264px, $p: 0, $r: repeat-x);
+
+  width: 100%;
+  height: 120px;
+  animation-name: ptnLogo;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  @include mobile {
+    @include bg-url(img, 'invest/img_ptn_logos_m.png');
+
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    animation-name: ptnLogoMb;
+    background-size: 1841px;
+  }
+}
+
+// early section
+@keyframes ptn-early-cont {
+  0% {
+    background-position: 5390px; // 이미지 크기대로 변경
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes ptn-early-cont-reverse {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 5390px; // 이미지 크기대로 변경
+  }
+}
+
+@keyframes success-talk-slide {
+  0% {
+    background-position: 0 2056px; // 이미지 크기대로 변경
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
+// success section
+.success-section {
+  &.aos-animate {
+    .obj {
+      animation-name: obj_replace;
+      animation-delay: 0.8s;
+    }
+  }
+
+  .obj {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.61, 0.5, 0.24, 0.77);
+  }
+}
+
+// branding process section
+.branding-process-section {
+  .bp-btn {
+    &::after {
+      animation-name: scrolling;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+// 띠링띠링
+@keyframes trtr {
+  10% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  90% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.ani-trtr {
+  animation-name: trtr;
+  animation-duration: 1.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+// 달랑달랑
+@keyframes trtrtr {
+
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    -webkit-transform: rotate3d(0, 0, 1, -3deg);
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 3deg);
+    transform: rotate3d(0, 0, 1, 3deg);
+  }
+}
+
+.ani-trtrtr {
+  animation-name: trtrtr;
+  animation-duration: 1.7s;
+  //animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+// mnb page
+// mnb slide section
+.pocket-swiper-section {
+  &.aos-animate .obj {
+    animation-name: obj_replace;
+    animation-delay: 0.8s;
+  }
+
+  .obj {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.61, 0.5, 0.24, 0.77);
+  }
+}
+
+// 폭죽
+@keyframes obj_replace {
+  20% {
+    opacity: 1;
+    transform: translate(0, -10px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(0, -10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.ani-replace {
+  animation-name: obj_replace;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.61, 0.5, 0.24, 0.77);
+}
+
+.ceo-interview-section {
+  .ani-replace {
+    animation-name: none;
+    animation-delay: 0.8s;
+  }
+
+  &.aos-animate .ani-replace {
+    animation-name: obj_replace;
+  }
+}
+
+// 채워지는 애니메이션
+.ani-full {
+  animation-name: full;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes full {
+  0% {
+    opacity: 1;
+    background-color: #0a39b4;
+  }
+
+  50% {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  100% {
+    opacity: 1;
+    background-color: #fff;
+  }
+}
+
+// dongdong
+@keyframes dongdong {
+  0% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.ani-dongdong {
+  animation-name: dongdong;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+// 화살표 가로 애니메이션
+.scroll-horizontal-img {
+  animation-name: horizontal-scroll;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+@keyframes horizontal-scroll {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: translateX(30%);
+  }
+}

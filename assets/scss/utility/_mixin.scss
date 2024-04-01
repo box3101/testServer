@@ -1,0 +1,262 @@
+// responsive Setting
+@mixin media-dv($device, $range: max) {
+  @media all and (#{$range}-width: device($device, "key")) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media-dv(tab) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include media-dv(mb) {
+    @content;
+  }
+}
+
+// responsive custom
+@mixin media($px, $range: max) {
+  @media all and (#{$range}-width: $px) {
+    @content;
+  }
+}
+
+// position: absolute
+@mixin absolute($t: 0, $l: 0, $b: null, $r: null) {
+  position: absolute;
+
+  @if $t {
+    top: if($b, auto, $t);
+    bottom: $b;
+
+    left: if($r, auto, $l);
+    right: $r;
+  }
+}
+
+// size
+@mixin circle($s) {
+  width: $s;
+  height: $s;
+  border-radius: 50%;
+  @content;
+}
+
+@mixin square($s) {
+  width: $s;
+  height: $s;
+}
+
+@mixin translate($t: 0, $l: 0, $b: null, $x: null, $y: null) {
+  position: absolute;
+
+  @if $t==50% and $l==50% {
+    @if $x and $y {
+      top: $t;
+      left: $l;
+      transform: translate($x, $y);
+    }
+
+    @else if $x {
+      top: $t;
+      left: $l;
+      transform: translate($x, -50%);
+    }
+
+    @else if $y {
+      top: $t;
+      left: $l;
+      transform: translate(-50%, $y);
+    }
+
+    @else {
+      top: $t;
+      left: $l;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @else if $t==50% or $l==50% {
+    @if $t==50% {
+      top: $t;
+      left: $l;
+      transform: if($y, translateY($y), translateY(-50%));
+    }
+
+    @if $l==50% {
+      top: $t;
+      left: $l;
+      transform: if($x, translateX($x), translateX(-50%));
+    }
+  }
+}
+
+@mixin wh($w: null, $h: null) {
+  width: $w;
+  height: $h;
+}
+
+@mixin full {
+  width: 100%;
+  height: 100%;
+}
+
+// flex items
+@mixin flex($d: flex) {
+  display: $d;
+  @content;
+}
+
+@mixin flex-col($d: flex) {
+  display: $d;
+  flex-direction: column;
+  @content;
+}
+
+@mixin flex-op($ai: null, $jc: null) {
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin flex-center($d: flex) {
+  display: $d;
+  @include flex-op(center, center);
+
+  @content;
+}
+
+@mixin flex-item-center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-btw($d: flex) {
+  display: $d;
+  @include flex-op(center, space-between);
+
+  @content;
+}
+
+@mixin flex-item-option($ai: null, $jc: null) {
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+// background image
+@mixin bg-url($path, $img){
+background-image: urlPath($path, $img);
+}
+
+@mixin bg-op($p: center, $s: auto, $r: no-repeat) {
+  background-position: $p;
+  background-size: $s;
+  background-repeat: $r;
+}
+
+@mixin font-op($c: null, $w: null, $ls: null) {
+  @content;
+
+  font-weight: $w;
+  color: $c;
+  letter-spacing: $ls;
+}
+
+// bafore, after
+@mixin make-before($c: "", $d: block) {
+  &:before {
+    content: $c;
+    display: $d;
+    @content;
+  }
+}
+
+@mixin make-after($c: "", $d: block) {
+  &:after {
+    content: $c;
+    display: $d;
+    @content;
+  }
+}
+
+@mixin transition-group {
+  /* 인터랙션 관련 스타일 */
+  @content;
+  /* END 인터랙션 관련 스타일 */
+}
+
+// ie
+@mixin ie-style {
+  @at-root html.ie & {
+    @content;
+  }
+}
+
+// input
+@mixin input-reset {
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+@mixin hover {
+
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+//shortening word
+@mixin ellipse($line-cnt, $line-height) {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  line-height: $line-height; // $line-height : line-height값 (단위 필수)
+  height: $line-height * $line-cnt;
+  -webkit-line-clamp: $line-cnt; // $line-cnt : 라인 수
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+@mixin remove-ellipse {
+  overflow: visible;
+  text-overflow: unset;
+  height: auto;
+  line-height: 1.4;
+  -webkit-line-clamp: unset; // $line-cnt : 라인 수
+  -webkit-box-orient: unset;
+}
+
+// iphone notch
+@mixin notch {
+
+  /* iPhone XS : 2436x1125px at 458ppi */
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+
+  /* iPhone XR : 1792x828px at 326ppi */
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    @content;
+  }
+
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+}
+
+@mixin po-y{
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+}

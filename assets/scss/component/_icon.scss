@@ -1,0 +1,44 @@
+/* ========== icon 관련 스타일 ========== */
+
+.icon {
+  display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.icon-arrow-wh {
+  width: 17px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='12' viewBox='0 0 17 12'%3E%3Cg id='그룹_58514' data-name='그룹 58514' transform='translate(15675 541)'%3E%3Crect id='사각형_27589' data-name='사각형 27589' width='17' height='12' transform='translate(-15675 -541)' fill='none'/%3E%3Cg id='그룹_58510' data-name='그룹 58510' transform='translate(-16565 -4240)'%3E%3Cpath id='합치기_13' data-name='합치기 13' d='M17239,20725l-5,5Zm-5-5,5,5Z' transform='translate(-16342.5 -17020)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' opacity='0.5'/%3E%3Cpath id='합치기_14' data-name='합치기 14' d='M17239,20725l-5,5Zm-5-5,5,5Z' transform='translate(-16333.5 -17020)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.icon-arrow-blue {
+  width: 17px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='12' viewBox='0 0 17 12'%3E%3Cg id='그룹_58513' data-name='그룹 58513' transform='translate(15674 515)'%3E%3Crect id='사각형_27590' data-name='사각형 27590' width='17' height='12' transform='translate(-15674 -515)' fill='none'/%3E%3Cg id='그룹_58512' data-name='그룹 58512'%3E%3Cg id='그룹_58511' data-name='그룹 58511' transform='translate(-16563.498 -3963)'%3E%3Cpath id='합치기_11' data-name='합치기 11' d='M17239,20725l-5,5Zm-5-5,5,5Z' transform='translate(-16342.5 -17271)' fill='none' stroke='%231354ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' opacity='0.5'/%3E%3Cpath id='합치기_12' data-name='합치기 12' d='M17239,20725l-5,5Zm-5-5,5,5Z' transform='translate(-16333.5 -17271)' fill='none' stroke='%231354ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.icon-long-arrow-row {
+  width: 151px;
+  height: 9px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='151' height='9' viewBox='0 0 151 9'%3E%3Cg id='그룹_58666' data-name='그룹 58666' transform='translate(11762 -2242)'%3E%3Crect id='사각형_27577' data-name='사각형 27577' width='151' height='9' transform='translate(-11762 2242)' fill='none'/%3E%3Cg id='그룹_58665' data-name='그룹 58665'%3E%3Cline id='선_3912' data-name='선 3912' x2='151' transform='translate(-11762 2250.5)' fill='none' stroke='%234b4b4b' stroke-width='1'/%3E%3Cline id='선_3913' data-name='선 3913' x1='8.5' y1='8' transform='translate(-11620 2242.5)' fill='none' stroke='%234b4b4b' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.icon-long-arrow-col {
+  width: 9px;
+  height: 37px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='37' viewBox='0 0 9 37'%3E%3Cg id='그룹_58868' data-name='그룹 58868' transform='translate(16690 -9758)'%3E%3Crect id='사각형_27726' data-name='사각형 27726' width='9' height='37' transform='translate(-16690 9758)' fill='none'/%3E%3Cg id='그룹_58867' data-name='그룹 58867' transform='translate(-16879 -3097)'%3E%3Cline id='선_3842' data-name='선 3842' y2='36.5' transform='translate(189.5 12855.25)' fill='none' stroke='%234b4b4b' stroke-width='1'/%3E%3Cline id='선_3843' data-name='선 3843' x1='8.5' y1='8' transform='translate(197.5 12882.75) rotate(90)' fill='none' stroke='%234b4b4b' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.icon-down-arrow {
+  width: 13px;
+  height: 27px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='27' viewBox='0 0 13 27'%3E%3Cg id='그룹_58468' data-name='그룹 58468' transform='translate(-878 -13308)'%3E%3Cpath id='다각형_56' data-name='다각형 56' d='M5.767.789a1,1,0,0,1,1.466,0L11.44,5.32A1,1,0,0,1,10.707,7H2.293A1,1,0,0,1,1.56,5.32Z' transform='translate(891 13335) rotate(180)' fill='%231354ff'/%3E%3Cpath id='다각형_57' data-name='다각형 57' d='M5.767.789a1,1,0,0,1,1.466,0L11.44,5.32A1,1,0,0,1,10.707,7H2.293A1,1,0,0,1,1.56,5.32Z' transform='translate(891 13325) rotate(180)' fill='%231354ff' opacity='0.5'/%3E%3Cpath id='다각형_58' data-name='다각형 58' d='M5.767.789a1,1,0,0,1,1.466,0L11.44,5.32A1,1,0,0,1,10.707,7H2.293A1,1,0,0,1,1.56,5.32Z' transform='translate(891 13315) rotate(180)' fill='%231354ff' opacity='0.2'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.icon-arrow-gray {
+  width: 11px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8'%3E%3Cg id='그룹_60239' data-name='그룹 60239' transform='translate(16361 3452)'%3E%3Crect id='사각형_28717' data-name='사각형 28717' width='11' height='8' transform='translate(-16361 -3452)' fill='none'/%3E%3Cg id='그룹_60238' data-name='그룹 60238' transform='translate(-16934 -5501.48)'%3E%3Cg id='그룹_59933' data-name='그룹 59933' transform='translate(574.5 2050.479)' opacity='0.5'%3E%3Cline id='선_4119' data-name='선 4119' x2='3.011' y2='3.011' transform='translate(0 0)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1.2'/%3E%3Cline id='선_4120' data-name='선 4120' y1='3.011' x2='3.011' transform='translate(0 3.011)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1.2'/%3E%3C/g%3E%3Cg id='그룹_59934' data-name='그룹 59934' transform='translate(579.715 2050.479)'%3E%3Cline id='선_4119-2' data-name='선 4119' x2='3.011' y2='3.011' transform='translate(0 0)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1.2'/%3E%3Cline id='선_4120-2' data-name='선 4120' y1='3.011' x2='3.011' transform='translate(0 3.011)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='1.2'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}

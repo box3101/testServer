@@ -1,0 +1,857 @@
+/* =================== invest =================== */
+// common
+.circle-wave-wrap {
+  @include flex-center;
+
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+
+  @include mobile {
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  @include make-before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+  }
+
+  @include make-after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+  }
+
+  .circle-wave {
+    @include make-before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      background-color: #000;
+      transform: translate(-50%, -50%);
+    }
+
+    @include make-after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      background-color: #000;
+      transform: translate(-50%, -50%);
+    }
+
+    .img {
+      z-index: 1;
+      position: relative;
+    }
+  }
+}
+
+// invest page only
+.invest-build-page {
+
+  // invest common
+  .l-center.minimum {
+    padding: 0 40px;
+
+    @include media(1024px) {
+      padding: 0 15px;
+    }
+  }
+
+  .bold {
+    color: color(invmain);
+  }
+
+  .common-ttl {
+    padding-top: 50px;
+    line-height: 1.4;
+    font-size: rem(42);
+    font-weight: 700;
+    text-align: center;
+
+    @include tablet {
+      padding-top: 30px;
+    }
+
+    @include mobile {
+      padding-top: 0;
+      font-size: rem(31);
+    }
+  }
+
+  .sec-title-wrap {
+    .sec-pager {
+      padding: 0 8px;
+
+      @include mobile {
+        padding: 0;
+      }
+    }
+
+    .sec-ttl {
+      padding: 0 8px;
+
+      @include mobile {
+        padding: 0;
+      }
+    }
+
+    .sec-ttl.sub {
+      background-image: linear-gradient(to right, #00187B 0%, #0628FF 50%, #00E7FF 100%);
+      color: white;
+
+      @include tablet {
+        margin-top: 10px;
+        padding: 15px 8px;
+      }
+
+      @include mobile {
+        z-index: 1;
+        position: relative;
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        padding: 23px 15px;
+      }
+    }
+
+    .sub-sec-ttl-wrap {
+      position: relative;
+
+      @include mobile {
+        margin-top: 25px;
+
+        @include make-before {
+          z-index: 0;
+          position: absolute;
+          top: -4px;
+          left: 13px;
+          width: 20px;
+          height: 18px;
+          border-radius: 4px;
+          background-color: #021FB4;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .blue-typing-cont {
+    background-color: color(invmain);
+  }
+
+  .type-desc-wrap {
+    .type-desc-ttl {
+      color: color(invmain);
+    }
+
+    .plus-txt {
+      color: color(invmain);
+    }
+  }
+
+  // main section
+  .main-section {
+    @include bg-url(img, 'invest/bg_main.png');
+
+    @include tablet {
+
+      background-position: 50% 100%;
+    }
+
+    @include mobile {
+      @include bg-url(img, 'invest/bg_main_m.png');
+
+      background-position: 100% 100%;
+    }
+  }
+
+  // help section
+  .help-conts {
+    .help-con-ttl {
+      padding: 30px 26px 21px;
+
+      @include media(1024px) {
+        font-size: rem(19);
+      }
+    }
+
+    .bold {
+      width: 100%;
+    }
+
+    &:first-child {
+      .bold {
+        background-image: linear-gradient(to left, #0628FF 0%, #DF00FF 100%);
+      }
+    }
+
+    &:nth-child(2) {
+      .bold {
+        background-image: linear-gradient(to left, #00E7FF 0%, #0628FF 100%);
+      }
+    }
+
+    &:nth-child(3) {
+      .bold {
+        background-image: linear-gradient(to left, #DF00FF 0%, #0628FF 50%, #00E7FF 100%);
+      }
+    }
+  }
+
+  // start section
+  .start-wrap {
+    .txt-wrap {
+      .main-dec {
+        line-height: 1.4;
+
+        &.c-main {
+          color: color(invmain);
+        }
+      }
+    }
+
+    .profile-wrap {
+      @include mobile {
+        width: 94px;
+        height: 94px;
+      }
+    }
+  }
+
+  // first question section
+  .first-question-section {
+    @include mobile {
+      padding-top: 10px;
+    }
+
+    .sec-title-wrap {
+      padding: 90px 40px 0;
+
+      @include media(1024px) {
+        padding: 0;
+        padding-top: 50px;
+      }
+
+      @include mobile {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .bg-video-wrap {
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    padding: 60px 80px;
+    color: white;
+    border-radius: 50px;
+
+    @include tablet {
+      margin-left: -15px;
+      width: calc(100% + 30px);
+      padding: 90px 15px;
+      border-radius: 0;
+    }
+
+    .bg-conts {
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .desc-conts {
+      z-index: 1;
+      position: relative;
+    }
+
+    .conts-ttl {
+      padding-bottom: 50px;
+      line-height: 1.4;
+      font-size: rem(32);
+      font-weight: 300;
+
+      @include tablet {
+        padding-bottom: 30px;
+      }
+
+      @include mobile {
+        padding-bottom: 0;
+        font-size: rem(26);
+      }
+
+      .bold {
+        color: white;
+      }
+    }
+
+    .inv-desc-ttl {
+      @include flex {
+        @include flex-op(center, flex-start);
+      }
+
+      position: relative;
+      margin-top: 40px;
+      padding: 24px 0;
+      font-size: rem(16);
+
+      @include tablet {
+        margin-top: 0;
+      }
+
+      @include mobile {
+        padding-top: 50px;
+        padding-bottom: 15px;
+        font-size: rem(14);
+      }
+
+      .txt {
+        flex-shrink: 0;
+        padding-right: 15px;
+      }
+
+      @include make-before {
+        position: absolute;
+        top: 30px;
+        left: auto;
+        right: 0;
+        width: 10px;
+        height: 1px;
+        background-color: white;
+        transform: rotate(43deg);
+
+        @include tablet {
+          content: none;
+        }
+      }
+
+      @include make-after {
+        width: 100%;
+        height: 1px;
+        background-color: white;
+
+        @include tablet {
+          content: none;
+        }
+      }
+    }
+
+    .inv-desc-list-wrap {
+      padding: 0 10px;
+
+      @include tablet {
+        flex-wrap: wrap;
+        padding: 0;
+      }
+    }
+
+    .inv-desc-list {
+      width: calc(25% - 13px);
+      padding: 24px 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 18px;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: rem(22);
+      font-weight: 700;
+      text-align: center;
+
+      @include tablet {
+        width: calc(50% - 5px);
+        margin-top: 10px;
+      }
+
+      @include mobile {
+        font-size: rem(20);
+      }
+    }
+  }
+
+  // second question section
+  .second-question-section {
+    background-color: white;
+
+    .sec-title-wrap {
+      padding-top: 60px;
+
+      @include tablet {
+        padding-top: 50px;
+      }
+
+      @include mobile {
+        padding-top: 25px;
+      }
+    }
+  }
+
+  // third question section
+  .third-question-section {
+    .sec-title-wrap {
+      @include mobile {
+        padding-top: 0;
+      }
+    }
+  }
+
+  // fourth question section
+  .fourth-question-section {
+    background-color: white;
+
+    @include mobile {
+      overflow: hidden;
+      padding-bottom: 0;
+    }
+  }
+
+  .start-section2 {
+    padding-top: 0;
+  }
+
+  // fifth question section
+  .fifth-question-section {
+    padding-bottom: 130px;
+
+    @include tablet {
+      padding-bottom: 70px;
+    }
+
+    @include mobile {
+      padding-bottom: 40px;
+    }
+
+    .area-title {
+      display: block;
+      margin-top: 50px;
+
+      @include mobile {
+        margin: 40px 0 10px;
+        padding-left: 0;
+        font-size: rem(16);
+      }
+    }
+
+    .settings-wrap {
+      @include mobile {
+        padding-top: 9px;
+      }
+    }
+
+    .blue-typing-cont:before {
+      background-color: color(invmain);
+    }
+
+    .type-desc-ttl .mb-big {
+      color: color(invmain);
+    }
+
+    .type-plus-wrap {
+      text-align: left;
+
+      .gray-txt {
+        @include mobile {
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+// invest start, common
+// common txt section
+.common-txt-section {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  background-color: white;
+  text-align: center;
+
+  @include mobile {
+    padding: 20px 15px 40px;
+  }
+
+  .scroll-arrow-wrap {
+    margin: 50px 0;
+  }
+
+  .gradi-desc {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 32px 10px;
+    border-radius: 20px;
+    background-image: linear-gradient(120deg, #DF00FF 0%, #0628FF 50%, #00E7FF 100%);
+    color: white;
+    box-shadow: 0 30px 24px rgba(0, 0, 0, 0.2);
+
+    @include mobile {
+      background-image: linear-gradient(115deg, #DF00FF 0%, #0628FF 50%, #00E7FF 100%);
+    }
+
+    .big {
+      font-size: rem(42);
+      font-weight: 700;
+
+      @include mobile {
+        font-size: rem(31);
+      }
+    }
+
+    .sub {
+      font-size: rem(38);
+      font-weight: 400;
+
+      @include mobile {
+        font-size: rem(28);
+      }
+    }
+  }
+
+  .desc-img-wrap {
+    .img {
+      max-width: 100%;
+    }
+  }
+}
+
+// image title list
+.image-title-list {
+  padding-top: 75px;
+
+  @include mobile {
+    padding-top: 30px;
+  }
+
+  .title {
+    padding: 10px 27px;
+    background-color: #000;
+    font-size: rem(28);
+    font-weight: 700;
+    color: white;
+
+    @include tablet {
+      font-size: rem(24);
+    }
+
+    @include mobile {
+      padding: 9px 15px;
+      font-size: rem(20);
+      text-align: center;
+    }
+  }
+
+  .sub-txt {
+    padding-bottom: 27px;
+    font-size: rem(28);
+    font-weight: 300;
+
+    @include mobile {
+      font-size: rem(20);
+      text-align: center;
+    }
+  }
+
+  .img-wrap {
+    position: relative;
+    padding: 30px;
+    background-color: #F9F9FB;
+    text-align: center;
+
+    .img {
+      max-width: 100%;
+    }
+  }
+
+  .vdo-wrap {
+    .vdo {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .video-wrap {
+    margin-top: 1px;
+  }
+}
+
+// rotate interaction
+.rotate-desc-wrap {
+  position: relative;
+  margin-top: 120px;
+  padding-left: 130px;
+
+  @include tablet {
+    margin-top: 80px;
+    padding-left: 0;
+  }
+
+  @include mobile {
+    margin-top: 50px;
+  }
+
+  .rt-ttl-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @include tablet {
+      position: static;
+      text-align: center;
+    }
+  }
+
+  .rt-ttl {
+    font-size: rem(38);
+    font-weight: 700;
+
+    @include mobile {
+      font-size: rem(26);
+    }
+  }
+
+  .rt-sub-ttl {
+    margin-top: 17px;
+    font-size: rem(18);
+    font-weight: 300;
+    color: #717171;
+
+    @include mobile {
+      margin-top: 8px;
+      font-size: rem(16);
+    }
+  }
+}
+
+.rt-desc-wrap {
+  overflow: hidden;
+  position: relative;
+  padding: 130px 74px;
+  text-align: center;
+
+  @include mobile {
+    overflow: visible;
+    padding: 76px 35px;
+  }
+
+  .img {
+    width: 95%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .rt-list-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rt-list {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+
+    @include tablet {
+      width: 130px;
+      height: 130px;
+    }
+
+    @include mobile {
+      width: 90px;
+      height: 90px;
+    }
+
+    @include make-before {
+      z-index: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 138px;
+      height: 138px;
+      border-radius: 50%;
+      box-shadow: 0 29px 21px rgba(151, 157, 194, 0.42);
+      transform: translate(-50%, -50%);
+
+      @include tablet {
+        width: 105px;
+        height: 105px;
+      }
+
+      @include mobile {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  .rt-list1 {
+    top: 4.7%;
+    left: 42%;
+
+    @include tablet {
+      top: 7.5%;
+    }
+
+    @include mobile {
+      top: 10.7%;
+      left: 42.2%;
+    }
+
+    @include media(450px) {
+      top: 9.3%;
+      left: 40.2%;
+    }
+
+    @include media(416px) {
+      top: 9.1%;
+      left: 39.8%;
+    }
+  }
+
+  .rt-list2 {
+    top: 30.5%;
+    left: auto;
+    right: 1.6%;
+
+    @include tablet {
+      right: 5.9%;
+    }
+
+    @include mobile {
+      top: 34.7%;
+      right: 6.5%;
+    }
+
+    @include media(450px) {
+      top: 31.6%;
+      right: 3%;
+    }
+
+    @include media(416px) {
+      top: 31.6%;
+      right: 3.4%;
+    }
+  }
+
+  .rt-list3 {
+    top: auto;
+    bottom: 10.8%;
+    left: auto;
+    right: 18.4%;
+
+    @include tablet {
+      bottom: 15%;
+    }
+
+    @include mobile {
+      bottom: 16.7%;
+      right: 21.6%;
+    }
+
+    @include media(450px) {
+      bottom: 16.4%;
+      right: 19%;
+    }
+
+    @include media(416px) {
+      bottom: 16.4%;
+      right: 19%;
+    }
+  }
+
+  .rt-list4 {
+    top: auto;
+    bottom: 13.1%;
+    left: 14.5%;
+
+    @include tablet {
+      bottom: 16.2%;
+      left: 17.5%;
+    }
+
+    @include mobile {
+      bottom: 18.6%;
+      left: 19.1%;
+    }
+
+    @include media(450px) {
+      bottom: 17.7%;
+      left: 16.2%;
+    }
+
+    @include media(416px) {
+      bottom: 17.4%;
+      left: 15.2%;
+    }
+  }
+
+  .rt-list5 {
+    top: 27.6%;
+    left: 3%;
+
+    @include tablet {
+      left: 6.6%;
+      top: 30.3%;
+    }
+
+    @include mobile {
+      top: 33.4%;
+      left: 6.4%;
+    }
+
+    @include media(450px) {
+      top: 32%;
+      left: 2.5%;
+    }
+
+    @include media(416px) {
+      top: 30.4%;
+      left: 4.3%;
+    }
+  }
+
+  .rt-list-txt {
+    @include flex-center;
+
+    z-index: 0;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-image: linear-gradient(135deg, #E8EBFC 0%, #AFB6E5 100%);
+    font-size: rem(28);
+    font-weight: 800;
+    color: white;
+    text-align: center;
+
+    @include tablet {
+      width: 130px;
+      height: 130px;
+      font-size: rem(23);
+    }
+
+    @include mobile {
+      width: 90px;
+      height: 90px;
+      font-size: rem(17);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="222.244" height="235.428" viewBox="0 0 222.244 235.428">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.08" y1="0.247" x2="0.87" y2="0.775" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7d81ff"/>
+      <stop offset="1" stop-color="#1b02fd"/>
+    </linearGradient>
+    <filter id="타원_3597" x="0" y="103.432" width="222.244" height="131.996" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#10094d" flood-opacity="0.361"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.08" y1="0.247" x2="0.87" y2="0.775" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7d81ff"/>
+      <stop offset="1" stop-color="#3019ff"/>
+    </linearGradient>
+    <filter id="타원_3598" x="0" y="48.676" width="222.244" height="131.996" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#10094d" flood-opacity="0.361"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.08" y1="0.247" x2="0.81" y2="0.899" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7886ff"/>
+      <stop offset="1" stop-color="#022cfd"/>
+    </linearGradient>
+    <filter id="타원_3599" x="0" y="0" width="222.244" height="131.996" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood flood-color="#10094d" flood-opacity="0.361"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_59088" data-name="그룹 59088" transform="translate(-397 -28653.498)">
+    <g transform="matrix(1, 0, 0, 1, 397, 28653.5)" filter="url(#타원_3597)">
+      <ellipse id="타원_3597-2" data-name="타원 3597" cx="81.122" cy="35.998" rx="81.122" ry="35.998" transform="translate(192.24 201.43) rotate(180)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 397, 28653.5)" filter="url(#타원_3598)">
+      <ellipse id="타원_3598-2" data-name="타원 3598" cx="81.122" cy="35.998" rx="81.122" ry="35.998" transform="translate(192.24 146.67) rotate(180)" fill="url(#linear-gradient-2)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 397, 28653.5)" filter="url(#타원_3599)">
+      <ellipse id="타원_3599-2" data-name="타원 3599" cx="81.122" cy="35.998" rx="81.122" ry="35.998" transform="translate(192.24 98) rotate(180)" fill="url(#linear-gradient-3)"/>
+    </g>
+  </g>
+</svg>

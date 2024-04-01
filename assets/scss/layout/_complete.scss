@@ -1,0 +1,80 @@
+/* =================== complete =================== */
+.complete-section {
+  @include flex-center;
+  // header 70px footer 300px
+  min-height: calc(100vh - 370px);
+
+  @include ie-style {
+    padding-top: 130px;
+  }
+
+  @include tablet {
+    // header 70px footer 374px
+    min-height: calc(100vh - 70px - 374px);
+  }
+
+  @include mobile {
+    // header 50px footer 360px
+    min-height: calc(100vh - 410px);
+  }
+
+  .l-center {
+    max-width: 100%;
+  }
+}
+
+.complete-desc {
+  text-align: center;
+
+  .check-icon {
+    @include flex-center;
+
+    width: 68px;
+    height: 68px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: color(main);
+  }
+
+  .complete-ttl {
+    margin-top: 10px;
+    font-size: rem(36);
+    font-weight: 700;
+  }
+
+  .complete-sub {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: rem(18);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .btn {
+    max-width: 460px;
+    width: 100%;
+    font-size: rem(18);
+    font-weight: 400;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}
+
+.again-desc {
+  margin-top: 50px;
+  text-align: center;
+
+  .again-sub {
+    margin-bottom: 10px;
+    font-size: rem(15);
+    font-weight: 300;
+  }
+
+  .btn {
+    width: 220px;
+    font-size: rem(14);
+    font-weight: 400;
+  }
+}

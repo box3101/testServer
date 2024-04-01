@@ -1,0 +1,80 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "editor.formatOnSave": true,
+    "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/assets/css/custom",
+      },
+    ],
+    "editor.tabSize": 2,
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**",
+    ],
+    "liveServer.settings.port": 8085,
+
+    /* =================== 20240322 lcy 추가 =================== */
+    "[javascript]": {
+      "editor.formatOnSave": true,
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": true,
+    },
+    "[typescript]": {
+      "editor.formatOnSave": true,
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": true,
+    },
+    /* Prettier 설정 추가 */
+    "prettier.singleQuote": true,
+    "prettier.printWidth": 80,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false,
+    "prettier.semi": true,
+    "prettier.bracketSpacing": true,
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#fa1b49",
+      "activityBar.background": "#fa1b49",
+      "activityBar.foreground": "#e7e7e7",
+      "activityBar.inactiveForeground": "#e7e7e799",
+      "activityBarBadge.background": "#155e02",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#fa1b49",
+      "statusBar.background": "#dd0531",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#fa1b49",
+      "statusBarItem.remoteBackground": "#dd0531",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "titleBar.activeBackground": "#dd0531",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#dd053199",
+      "titleBar.inactiveForeground": "#e7e7e799",
+    },
+    "peacock.color": "#dd0531",
+  },
+}

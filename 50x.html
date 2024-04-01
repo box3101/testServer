@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-family: 'helvetica', 'noto sans kr', -apple-system-font, Apple SD Gothic Neo, sans-serif;
+        line-height: 1.45;
+        font-weight: 300;
+        color: #0e141e;
+        letter-spacing: -0.02em;
+      }
+
+      .btn {
+        border-radius: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 0;
+        outline: none;
+      }
+
+      .error-cont-wrap {
+        display: flex;
+        justify-content: center;
+        padding: 15em;
+      }
+
+      .error-cont-wrap .error-dec {
+        font-size: 1.5em;
+      }
+
+      .btn-grp {
+        text-align: center;
+      }
+
+      .btn-grp button {
+        margin-top: 1.5em;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        padding: 11px 20px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: #4082ff;
+        color: white;
+        letter-spacing: -0.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page login-page error-page">
+      <div class="page-container">
+        <div class="narrow-panel">
+          <div class="error-cont-wrap">
+            <div class="error-cont-grp">
+              <p class="error-ttl">500</p>
+              <p class="error-dec">잠시후 다시 시도해주세요</p>
+              <div class="btn-grp"><button type="button" class="btn" onclick="window.location.href = '/'">홈으로</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

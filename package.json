@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "scripts": {
+    "sass": "sass --watch assets/scss/ui.scss:assets/css/custom/ui.css"
+  }
+}

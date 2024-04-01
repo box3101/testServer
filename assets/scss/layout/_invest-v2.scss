@@ -1,0 +1,527 @@
+.investment-build-page {
+  // iv deck section
+  .iv-deck-section {
+    padding: 120px 0 85.3px;
+    background-color: #000;
+
+    @include mobile {
+      padding: 50px 0 0;
+    }
+
+    .iv-deck-wrap {
+      position: relative;
+
+      @include mobile {
+        &::before {
+          content: '';
+          z-index: 1;
+          position: absolute;
+          top: auto;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 80%;
+          background: linear-gradient(to top, #000 18%, transparent);
+        }
+      }
+
+      .img-grp {
+        position: relative;
+        padding-top: 65%;
+
+        @include mobile {
+          padding-top: 206.123%;
+        }
+
+        .img {
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .iv-deck-txt-grp {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+
+        @include mobile {
+          bottom: 80px;
+        }
+
+        .iv-deck-ttl {
+          font-size: rem(62);
+          font-weight: 700;
+          color: #fff;
+          text-align: center;
+
+          @include tablet {
+            font-size: rem(44);
+            line-height: 1.125;
+          }
+        }
+
+        .iv-deck-txt {
+          padding: 15px 0 66px;
+          background: linear-gradient(to right, #02ecfd, #679fff, #b09cff);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: rem(36);
+          font-weight: 600;
+          text-align: center;
+
+          @include tablet {
+            padding: 14px 0 48px;
+            font-size: rem(20);
+            font-weight: 600;
+          }
+        }
+
+        .logo-grp {
+          width: 223px;
+          height: 26px;
+          margin: 0 auto;
+
+          @include tablet {
+            width: 179px;
+            height: 21px;
+          }
+
+          .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+            @include mobile {
+              max-width: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // iv step section
+  .iv-step-section {
+    @include bg-url(img, 'invest-v2/img_step_01.webp');
+
+    padding: 181px 0 151px;
+
+    @include tablet {
+      padding: 63.5px 0 37.2px;
+    }
+
+    .iv-step-wrap {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: column;
+        gap: 86.2px;
+      }
+
+      .iv-step-ttl {
+        padding-bottom: 63px;
+        font-size: rem(22);
+        font-weight: 700;
+        color: #a4adff;
+        line-height: 1.296;
+
+        @include tablet {
+          padding-bottom: 41px;
+          font-size: rem(17);
+        }
+      }
+
+      .iv-step-cont {
+        padding-bottom: 29px;
+
+        @include tablet {
+          padding-bottom: 38px;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        &.is-active {
+          .iv-step-txt {
+            color: #a4adff;
+          }
+
+          .iv-step-desc {
+            color: #fff;
+          }
+        }
+
+        .iv-step-txt {
+          font-size: rem(21);
+          font-weight: 600;
+          color: rgba(#fff, 0.22);
+
+          @include tablet {
+            font-size: rem(16);
+          }
+        }
+
+        .iv-step-desc {
+          padding-top: 8px;
+          font-size: rem(64);
+          font-weight: 800;
+          color: rgba(#fff, 0.26);
+          letter-spacing: -2.4px;
+
+          @include tablet {
+            padding-top: 10px;
+            font-size: rem(38);
+          }
+        }
+      }
+
+      .right {
+        @include tablet {
+          width: 100%;
+        }
+
+        .inv-company-txt {
+          z-index: 2;
+          position: relative;
+          margin-top: 23px;
+          margin-right: 6px;
+
+          font-size: rem(15);
+          font-weight: 500;
+          color: #64627a;
+          text-align: right;
+
+          @include tablet {
+            margin: 21.3px 0px 0 8px;
+            font-size: rem(13);
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  // iv demo section
+  .iv-demo-section {
+    @include bg-url(img, 'invest-v2/img_demo_02.webp');
+
+    width: 100%;
+    padding: 186px 0 156px;
+    background-size: cover;
+
+    @include tablet {
+      padding: 47.4px 0 98.6px;
+    }
+
+    .pk-img-grp {
+      width: 471px;
+      height: 82px;
+      margin: 0 auto;
+
+      @include mobile {
+        width: 241.48px;
+        height: auto;
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .iv-demo-ttl {
+      margin-top: -25px;
+      font-size: rem(59);
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+
+      @include mobile {
+        margin-top: -14px;
+
+        font-size: rem(29);
+      }
+    }
+
+    .iv-demo-tt {
+      margin-top: 13px;
+      background: linear-gradient(to right, #5340ff, #67e5ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: rem(81);
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: -3.8px;
+
+      @include mobile {
+        margin-top: 8px;
+        font-size: rem(38);
+        letter-spacing: -0.9px;
+      }
+    }
+
+    .iv-demo-wrap {
+      padding-top: 76px;
+      @include tablet {
+        padding-top: 39.9px;
+      }
+
+      .iv-demo-conts {
+        margin-bottom: 90px;
+
+        &.type-03 {
+          .en-tt {
+            font-family: 'pretendard' !important;
+          }
+        }
+
+        @include mobile {
+          overflow: hidden;
+          margin-bottom: 53px;
+          border-radius: 12px 12px 0 0;
+
+          &.type-01 {
+            .iv-demo-top {
+              background-image: linear-gradient(#000, #000),
+                linear-gradient(to bottom, #95fffb 0%, transparent);
+
+              &::before {
+                background: linear-gradient(rgba(#77f6ff, 0.19), transparent);
+              }
+
+              .en-tt {
+                background: linear-gradient(to right, #5340ff, #67e5ff);
+              }
+            }
+          }
+
+          &.type-02 {
+            .iv-demo-top {
+              background-image: linear-gradient(#000, #000),
+                linear-gradient(to bottom, #abffd5 0%, transparent);
+
+              &::before {
+                background: linear-gradient(rgba(#77ffad, 0.19), transparent);
+              }
+            }
+
+            .en-tt {
+              background: linear-gradient(to right, #f4ff58, #29ffff);
+            }
+          }
+
+          &.type-03 {
+            .iv-demo-top {
+              background-image: linear-gradient(#000, #000),
+                linear-gradient(to bottom, #ffe477 0%, transparent);
+
+              &::before {
+                background: linear-gradient(rgba(#ffdb77, 0.19), transparent);
+              }
+            }
+
+            .en-tt {
+              background: linear-gradient(to right, #d4ff43, #ffe926, #ffe926);
+              text-align: center;
+            }
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .iv-demo-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 9.5px 32px 9.5px 26px;
+          margin-bottom: 19px;
+          background: linear-gradient(to right, #4302fd, #23e9ff);
+
+          @include tablet {
+            flex-wrap: wrap;
+            padding: 9.5px 16px;
+          }
+
+          @include mobile {
+            overflow: hidden;
+            position: relative;
+            flex-direction: column;
+            gap: 17px;
+            padding: 0;
+            margin-bottom: 0;
+            border: 1px solid transparent;
+            border-radius: 12px 12px 0 0;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+
+            &::before {
+              content: '';
+              z-index: 1;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .ttl-grp {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+
+            @include mobile {
+              flex-direction: column;
+              gap: 10px;
+              padding-top: 35px;
+            }
+
+            .en-tt {
+              font-family: 'Poppins', sans-serif;
+              font-size: rem(24);
+              font-weight: 700;
+              color: #fff;
+
+              @include tablet {
+                font-size: rem(18);
+              }
+
+              @include mobile {
+                font-weight: 800;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+
+            .ko-tt {
+              font-size: rem(16);
+              font-weight: 400;
+              color: rgba(#fff, 0.75);
+
+              @include tablet {
+                font-size: rem(14);
+              }
+            }
+          }
+
+          .com-tt {
+            font-size: rem(17);
+            font-weight: 600;
+            color: #fff;
+
+            @include tablet {
+              font-size: rem(15);
+            }
+
+            @include mobile {
+              font-weight: 400;
+              padding-bottom: 35px;
+            }
+          }
+        }
+
+        .iv-demo-video-grp {
+          position: relative;
+          // height: 540px;
+
+          padding-top: 56.25%;
+
+          .iv-demo-img-grp {
+            z-index: 3;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            &:active {
+              .play-img {
+                .img {
+                  &.type-default {
+                    display: none;
+                  }
+
+                  &.type-active {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+
+          .iv-demo-img {
+            pointer-events: none;
+
+            .img {
+              @include full;
+
+              object-fit: contain;
+            }
+          }
+
+          .play-img {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .img {
+              width: 70px;
+              height: 70px;
+
+              @include mobile {
+                width: 46px;
+                height: 46px;
+              }
+
+              &.type-default {
+                display: block;
+              }
+
+              &.type-active {
+                display: none;
+              }
+            }
+          }
+
+          .bk-bg {
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+          }
+
+          .iframe {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
