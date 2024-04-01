@@ -124868,10 +124868,11 @@ button {
   border-radius: 50%;
 }
 .investment-eval .section-container .section-info .left:before {
+  will-change: transform;
   background: #000;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translate3d(0, 0, 0);
   z-index: 2;
   animation-name: sizeMove;
   animation-duration: 3s;
@@ -124880,10 +124881,11 @@ button {
   animation-delay: 2s;
 }
 .investment-eval .section-container .section-info .left:after {
+  will-change: transform;
   background: rgba(246, 246, 246, 0.4);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translate3d(0, 0, 0);
   animation: sizeMove 3s infinite linear;
   animation-delay: 3s; /* Creates the wave effect by delaying the start of the animation */
 }
@@ -124896,28 +124898,30 @@ button {
 .investment-eval .section-container .section-info .left .central-image:before {
   content: "";
   display: block;
+  will-change: transform;
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
   border-radius: 50%;
   background-color: #000;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+  transform: translate(-50%, -50%) translate3d(0, 0, 0);
   animation: sizeMove 3s infinite linear;
   animation-delay: 0s; /* Creates the wave effect by delaying the start of the animation */
 }
 .investment-eval .section-container .section-info .left .central-image:after {
   content: "";
   display: block;
+  will-change: transform;
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
   border-radius: 50%;
   background-color: #000;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+  transform: translate(-50%, -50%) translate3d(0, 0, 0);
   animation: sizeMove 3s infinite linear;
   animation-delay: 1s; /* Creates the wave effect by delaying the start of the animation */
 }
@@ -125130,6 +125134,7 @@ button {
   }
   .investment-eval .section-container .section-category ul::before {
     display: block;
+    display: none !important;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -125137,7 +125142,7 @@ button {
     height: 19px;
   }
   .investment-eval .section-container .section-category:nth-of-type(2) h3:before {
-    display: block !important;
+    display: none !important;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -125149,6 +125154,7 @@ button {
   }
   .investment-eval .section-container .section-category h3::before {
     display: block !important;
+    display: none !important;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -125159,6 +125165,7 @@ button {
     border-left: 0.5px dashed #c3c3c3;
   }
   .investment-eval .section-container .section-info .section-categorys::before {
+    display: none;
     top: -23px;
     width: calc(100% - 31vw);
     height: 1px;
@@ -125272,10 +125279,12 @@ button {
     width: 111px;
   }
   .investment-eval .section-container .section-info .left .central-image:before {
+    will-change: transform;
     width: 125px;
     height: 125px;
   }
   .investment-eval .section-container .section-info .left .central-image:after {
+    will-change: transform;
     width: 202px;
     height: 202px;
   }
@@ -125299,6 +125308,33 @@ button {
     margin-top: 46px;
     width: 100%;
   }
+  .investment-eval .section-container .section-info .section-categorys:after {
+    content: "";
+    display: block;
+    background-image: url("../../images/img/invest-v2/bg-lines.svg");
+    z-index: -1;
+    display: block;
+    width: 58vw;
+    height: 37vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -12vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media all and (max-width: 56.25rem) and (max-width: 75rem) {
+  .investment-eval .section-container .section-info .section-categorys::after {
+    width: 62vw;
+  }
+}
+@media all and (max-width: 56.25rem) and (max-width: 56.25rem) {
+  .investment-eval .section-container .section-info .section-categorys::after {
+    width: 58vw;
+  }
+}
+@media all and (max-width: 56.25rem) {
   .investment-eval .section-container .section-category {
     flex-direction: column;
     flex: 1;
