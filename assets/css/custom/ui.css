@@ -124869,7 +124869,6 @@ button {
 }
 .investment-eval .section-container .section-info .left:before {
   will-change: transform;
-  background: #000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) translate3d(0, 0, 0);
@@ -124916,7 +124915,6 @@ button {
   top: 50%;
   left: 50%;
   border-radius: 50%;
-  background-color: #000;
   -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
   transform: translate(-50%, -50%) translate3d(0, 0, 0);
   animation: sizeMove 3s infinite linear;
@@ -124937,7 +124935,6 @@ button {
   top: 50%;
   left: 50%;
   border-radius: 50%;
-  background-color: #000;
   -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
   transform: translate(-50%, -50%) translate3d(0, 0, 0);
   animation: sizeMove 3s infinite linear;
@@ -124954,11 +124951,13 @@ button {
     width: 0;
     height: 0;
     opacity: 0.1;
+    background: #000;
   }
   100% {
     width: 400px;
     height: 400px;
     opacity: 0;
+    background: #000;
   }
 }
 @media all and (max-width: 56.25rem) {
@@ -124967,11 +124966,13 @@ button {
       width: 0;
       height: 0;
       opacity: 0.1;
+      background: #000;
     }
     100% {
       width: 250px;
       height: 250px;
       opacity: 0;
+      background: #000;
     }
   }
 }

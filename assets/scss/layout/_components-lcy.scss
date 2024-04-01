@@ -1777,7 +1777,6 @@ $rninvmain: #1b02fd;
           will-change: transform;
           // width: 200px; // Outer circle size, adjust as needed
           // height: 200px; // Outer circle size, adjust as needed
-          background: #000; // Outer circle color with transparency
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%) translate3d(0,0,0);
@@ -1822,7 +1821,6 @@ $rninvmain: #1b02fd;
             top: 50%;
             left: 50%;
             border-radius: 50%;
-            background-color: #000;
             -webkit-transform: translate(-50%, -50%) translate3d(0,0,0);
             transform: translate(-50%, -50%) translate3d(0,0,0);
             animation: sizeMove 3s infinite linear;
@@ -1841,7 +1839,6 @@ $rninvmain: #1b02fd;
             top: 50%;
             left: 50%;
             border-radius: 50%;
-            background-color: #000;
             -webkit-transform: translate(-50%, -50%) translate3d(0,0,0);
             transform: translate(-50%, -50%) translate3d(0,0,0);
             animation: sizeMove 3s infinite linear;
@@ -1856,11 +1853,13 @@ $rninvmain: #1b02fd;
               width: 0;
               height: 0;
               opacity: 0.1;
+              background:#000;
             }
             100% {
               width: 400px;
               height: 400px;
               opacity: 0;
+              background:#000;
             }
           }
           
@@ -1870,11 +1869,13 @@ $rninvmain: #1b02fd;
                 width: 0;
                 height: 0;
                 opacity: 0.1;
+                background:#000;
               }
               100% {
                 width: 250px;
                 height: 250px;
                 opacity: 0;
+                background:#000;
               }
             }
           }
