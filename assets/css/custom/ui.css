@@ -124880,6 +124880,12 @@ button {
   animation-timing-function: linear;
   animation-delay: 2s;
 }
+@media all and (max-width: 56.25rem) {
+  .investment-eval .section-container .section-info .left:before {
+    animation: sizeMoveTab 3s infinite linear;
+    animation-delay: 2s;
+  }
+}
 .investment-eval .section-container .section-info .left:after {
   will-change: transform;
   background: rgba(246, 246, 246, 0.4);
@@ -124888,6 +124894,12 @@ button {
   transform: translate(-50%, -50%) translate3d(0, 0, 0);
   animation: sizeMove 3s infinite linear;
   animation-delay: 3s; /* Creates the wave effect by delaying the start of the animation */
+}
+@media all and (max-width: 56.25rem) {
+  .investment-eval .section-container .section-info .left:after {
+    animation: sizeMoveTab 3s infinite linear;
+    animation-delay: 3s; /* Creates the wave effect by delaying the start of the animation */
+  }
 }
 .investment-eval .section-container .section-info .left .central-image {
   position: relative;
@@ -124910,6 +124922,12 @@ button {
   animation: sizeMove 3s infinite linear;
   animation-delay: 0s; /* Creates the wave effect by delaying the start of the animation */
 }
+@media all and (max-width: 56.25rem) {
+  .investment-eval .section-container .section-info .left .central-image:before {
+    animation: sizeMoveTab 3s infinite linear;
+    animation-delay: 0s; /* Creates the wave effect by delaying the start of the animation */
+  }
+}
 .investment-eval .section-container .section-info .left .central-image:after {
   content: "";
   display: block;
@@ -124925,6 +124943,12 @@ button {
   animation: sizeMove 3s infinite linear;
   animation-delay: 1s; /* Creates the wave effect by delaying the start of the animation */
 }
+@media all and (max-width: 56.25rem) {
+  .investment-eval .section-container .section-info .left .central-image:after {
+    animation: sizeMoveTab 3s infinite linear;
+    animation-delay: 1s; /* Creates the wave effect by delaying the start of the animation */
+  }
+}
 @keyframes sizeMove {
   0% {
     width: 0;
@@ -124938,7 +124962,7 @@ button {
   }
 }
 @media all and (max-width: 56.25rem) {
-  @keyframes sizeMove {
+  @keyframes sizeMoveTab {
     0% {
       width: 0;
       height: 0;

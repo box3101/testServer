@@ -1768,6 +1768,12 @@ $rninvmain: #1b02fd;
         }
 
         &:before {
+          
+          @include media($tab, max) {
+            animation: sizeMoveTab 3s infinite linear;
+          animation-delay: 2s;
+
+          }
           will-change: transform;
           // width: 200px; // Outer circle size, adjust as needed
           // height: 200px; // Outer circle size, adjust as needed
@@ -1784,6 +1790,12 @@ $rninvmain: #1b02fd;
         }
 
         &:after {
+          
+          @include media($tab, max) {
+            animation: sizeMoveTab 3s infinite linear;
+          animation-delay: 3s; /* Creates the wave effect by delaying the start of the animation */
+
+          }
           will-change: transform;
           // width: 305px; // Inner circle size, adjust as needed
           // height: 305px; // Inner circle size, adjust as needed
@@ -1798,6 +1810,12 @@ $rninvmain: #1b02fd;
         .central-image {
           position: relative;
           @include make-before {
+            
+            @include media($tab, max) {
+              animation: sizeMoveTab 3s infinite linear;
+            animation-delay: 0s; /* Creates the wave effect by delaying the start of the animation */
+
+            }
             will-change: transform;
             display: block;
             position: absolute;
@@ -1811,6 +1829,12 @@ $rninvmain: #1b02fd;
             animation-delay: 0s; /* Creates the wave effect by delaying the start of the animation */
           }
           @include make-after {
+            
+            @include media($tab, max) {
+              animation: sizeMoveTab 3s infinite linear;
+            animation-delay: 1s; /* Creates the wave effect by delaying the start of the animation */
+
+            }
             will-change: transform;
             display: block;
             position: absolute;
@@ -1839,9 +1863,9 @@ $rninvmain: #1b02fd;
               opacity: 0;
             }
           }
-
+          
           @include media($tab, max) {
-            @keyframes sizeMove {
+            @keyframes sizeMoveTab {
               0% {
                 width: 0;
                 height: 0;
