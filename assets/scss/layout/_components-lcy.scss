@@ -1770,8 +1770,8 @@ $rninvmain: #1b02fd;
         &:before {
           
           @include media($tab, max) {
-            animation: sizeMoveTab 3s infinite linear;
-          animation-delay: 2s;
+          animation: none;
+            animation-delay: 2s;
 
           }
           will-change: transform;
@@ -1791,8 +1791,8 @@ $rninvmain: #1b02fd;
         &:after {
           
           @include media($tab, max) {
-            animation: sizeMoveTab 3s infinite linear;
-          animation-delay: 3s; /* Creates the wave effect by delaying the start of the animation */
+          animation: none;
+            animation-delay: 3s; /* Creates the wave effect by delaying the start of the animation */
 
           }
           will-change: transform;
@@ -1811,8 +1811,8 @@ $rninvmain: #1b02fd;
           @include make-before {
             
             @include media($tab, max) {
-              animation: sizeMoveTab 3s infinite linear;
-            animation-delay: 0s; /* Creates the wave effect by delaying the start of the animation */
+            animation: none;
+              animation-delay: 0s; /* Creates the wave effect by delaying the start of the animation */
 
             }
             will-change: transform;
@@ -1829,8 +1829,8 @@ $rninvmain: #1b02fd;
           @include make-after {
             
             @include media($tab, max) {
-              animation: sizeMoveTab 3s infinite linear;
-            animation-delay: 1s; /* Creates the wave effect by delaying the start of the animation */
+            animation: none;
+              animation-delay: 1s; /* Creates the wave effect by delaying the start of the animation */
 
             }
             will-change: transform;

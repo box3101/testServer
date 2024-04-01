@@ -124881,7 +124881,7 @@ button {
 }
 @media all and (max-width: 56.25rem) {
   .investment-eval .section-container .section-info .left:before {
-    animation: sizeMoveTab 3s infinite linear;
+    animation: none;
     animation-delay: 2s;
   }
 }
@@ -124896,7 +124896,7 @@ button {
 }
 @media all and (max-width: 56.25rem) {
   .investment-eval .section-container .section-info .left:after {
-    animation: sizeMoveTab 3s infinite linear;
+    animation: none;
     animation-delay: 3s; /* Creates the wave effect by delaying the start of the animation */
   }
 }
@@ -124922,7 +124922,7 @@ button {
 }
 @media all and (max-width: 56.25rem) {
   .investment-eval .section-container .section-info .left .central-image:before {
-    animation: sizeMoveTab 3s infinite linear;
+    animation: none;
     animation-delay: 0s; /* Creates the wave effect by delaying the start of the animation */
   }
 }
@@ -124942,7 +124942,7 @@ button {
 }
 @media all and (max-width: 56.25rem) {
   .investment-eval .section-container .section-info .left .central-image:after {
-    animation: sizeMoveTab 3s infinite linear;
+    animation: none;
     animation-delay: 1s; /* Creates the wave effect by delaying the start of the animation */
   }
 }
