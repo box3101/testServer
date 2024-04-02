@@ -1780,7 +1780,7 @@ $rninvmain: #1b02fd;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%) translate3d(0,0,0);
-          z-index: 2;
+          z-index: 10;
           animation-name: sizeMove;
           animation-duration: 3s;
           animation-iteration-count: infinite;
@@ -2487,7 +2487,7 @@ $rninvmain: #1b02fd;
   .chk-card__btn button {
     width: 100%;
     justify-content: center;
-    height: 42px;
+    height: 46px;
     font-size: 16px;
     font-weight: 600;
   }
